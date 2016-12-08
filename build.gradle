@@ -1,0 +1,31 @@
+// Lombok plugin
+// see https://projectlombok.org/features/index.html
+plugins {
+    id "io.franzbecker.gradle-lombok" version "1.8"
+}
+
+/**********************
+ * Project Configuration
+ **********************/
+apply plugin: 'java'
+apply plugin: 'eclipse'
+
+
+// repositories for the project
+repositories {
+    mavenCentral()
+}
+
+
+dependencies {
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+
+// set the gradle version
+task wrapper(type: Wrapper) {
+    gradleVersion='3.2'
+}
