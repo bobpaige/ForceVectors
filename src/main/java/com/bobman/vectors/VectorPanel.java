@@ -25,7 +25,8 @@ public class VectorPanel extends JPanel {
     vectors.add(ForceVector.builder()
         .radians(Math.PI / 3)
         .length(22)
-        .build().reverse());
+        .build()
+        .reverse());
     start = new Point(100, 100);
   }
 

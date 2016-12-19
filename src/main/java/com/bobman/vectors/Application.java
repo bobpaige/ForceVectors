@@ -1,10 +1,11 @@
 package com.bobman.vectors;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
 import javax.swing.JFrame;
 
-public class Main {
+public class Application {
 
   private JFrame frmVectorpanel;
 
@@ -15,7 +16,7 @@ public class Main {
     EventQueue.invokeLater(new Runnable() {
       public void run() {
         try {
-          Main window = new Main();
+          Application window = new Application();
           window.frmVectorpanel.setVisible(true);
         } catch (Exception e) {
           e.printStackTrace();
@@ -27,7 +28,7 @@ public class Main {
   /**
    * Create the application.
    */
-  public Main() {
+  public Application() {
     initialize();
   }
 
@@ -39,9 +40,10 @@ public class Main {
     frmVectorpanel.setTitle("VectorPanel");
     frmVectorpanel.setBounds(100, 100, 450, 300);
     frmVectorpanel.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-    
+
     VectorPanel vectorPanel = new VectorPanel();
-    frmVectorpanel.getContentPane().add(vectorPanel, BorderLayout.CENTER);
+    frmVectorpanel.getContentPane()
+        .add(vectorPanel, BorderLayout.CENTER);
   }
 
 }
